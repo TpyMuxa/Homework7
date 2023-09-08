@@ -57,5 +57,9 @@ public class Main {
                 System.out.println("Месяц " + i + " сумма накоплений равна " + initialAmount);
             }
         }
+        System.out.println("Задание 7");
+        for (int friday = 6; friday <= 31; friday = friday + 7) {
+            System.out.println("Сегодня пятница, " + friday + " -е число. Необходимо подготовить отчет");
+        }
     }
 }
