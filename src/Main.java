@@ -30,5 +30,13 @@ public class Main {
             population = population + population * different / 1000;
             System.out.println("Год " + i + " численность населения составляет " + population);
         }
+        System.out.println("Задание 4");
+        initialAmount = 15000;
+        month = 0;
+        while (initialAmount < 12_000_000) {
+            month++;
+            initialAmount = initialAmount + initialAmount * 7 / 100;
+            System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount);
+        }
     }
 }
