@@ -38,5 +38,15 @@ public class Main {
             initialAmount = initialAmount + initialAmount * 7 / 100;
             System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount);
         }
+        System.out.println("Задание 5");
+        initialAmount = 15000;
+        month = 0;
+        while (initialAmount < 12_000_000) {
+            month++;
+            initialAmount = initialAmount + initialAmount * 7 / 100;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount);
+            }
+        }
     }
 }
