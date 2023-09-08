@@ -21,5 +21,14 @@ public class Main {
             System.out.print(counter + " ");
         }
         System.out.println();
+        System.out.println("Задание 3");
+        int population = 12_000_000;
+        int birthRate = 17;
+        int death = 8;
+        int different = birthRate - death;
+        for (int i = 1; i <= 10; i++) {
+            population = population + population * different / 1000;
+            System.out.println("Год " + i + " численность населения составляет " + population);
+        }
     }
 }
