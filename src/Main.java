@@ -61,5 +61,15 @@ public class Main {
         for (int friday = 6; friday <= 31; friday = friday + 7) {
             System.out.println("Сегодня пятница, " + friday + " -е число. Необходимо подготовить отчет");
         }
+        System.out.println("Задание 8");
+        int thisYear = 2023;
+        int start = thisYear - 200;
+        int stop = thisYear + 100;
+        while (start <= stop) {
+            start++;
+            if (start % 79 == 0) {
+                System.out.println(start);
+            }
+        }
     }
 }
