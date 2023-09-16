@@ -4,8 +4,10 @@ public class Main {
         int initialAmount = 0;
         int initialPayment = 15000;
         int month = 0;
-        while (initialAmount <= 2_459_000) {
-            initialPayment = initialPayment + initialPayment / 100;
+        int saveMoney = 2_459_000;
+        while (initialAmount <= saveMoney) {
+            int precent = initialPayment / 100;
+            initialPayment = initialPayment + precent;
             initialAmount = initialAmount + initialPayment;
             month++;
             System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount + " рублей");
@@ -26,24 +28,27 @@ public class Main {
         int birthRate = 17;
         int death = 8;
         int different = birthRate - death;
-        for (int i = 1; i <= 10; i++) {
+        for (int year = 1; year <= 10; year++) {
             population = population + population * different / 1000;
-            System.out.println("Год " + i + " численность населения составляет " + population);
+            System.out.println("Год " + year + " численность населения составляет " + population);
         }
         System.out.println("Задание 4");
         initialAmount = 15000;
         month = 0;
-        while (initialAmount < 12_000_000) {
+        saveMoney = 12_000_000;
+        while (initialAmount < saveMoney) {
             month++;
-            initialAmount = initialAmount + initialAmount * 7 / 100;
+            int precent = initialAmount * 7 / 100;
+            initialAmount = initialAmount + precent;
             System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount);
         }
         System.out.println("Задание 5");
         initialAmount = 15000;
         month = 0;
-        while (initialAmount < 12_000_000) {
+        while (initialAmount < saveMoney) {
             month++;
-            initialAmount = initialAmount + initialAmount * 7 / 100;
+            int precent = initialAmount * 7 / 100;
+            initialAmount = initialAmount + precent;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount);
             }
@@ -52,7 +57,8 @@ public class Main {
         initialAmount = 15000;
         month = 9 * 12;
         for (int i = 1; i <= month; i++) {
-            initialAmount = initialAmount + initialAmount * 7 / 100;
+            int precent = initialAmount * 7 / 100;
+            initialAmount = initialAmount + precent;
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " сумма накоплений равна " + initialAmount);
             }
