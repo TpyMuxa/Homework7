@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
-        int initialAmount = 0;
-        int initialPayment = 15000;
+        double initialAmount = 0;
+        double initialPayment = 15000;
         int month = 0;
-        int saveMoney = 2_459_000;
+        double saveMoney = 2_459_000;
         while (initialAmount <= saveMoney) {
-            int precent = initialPayment / 100;
+            double precent = initialPayment / 100;
             initialPayment = initialPayment + precent;
             initialAmount = initialAmount + initialPayment;
             month++;
-            System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount + " рублей");
+            System.out.printf("Месяц %s сумма накоплений равна %.2f рублей\n", month, initialAmount);
         }
         System.out.println("Задание 2");
         int counter = 0;
@@ -36,31 +36,32 @@ public class Main {
         initialAmount = 15000;
         month = 0;
         saveMoney = 12_000_000;
+        double percentSeven = 7d / 100;
         while (initialAmount < saveMoney) {
             month++;
-            int precent = initialAmount * 7 / 100;
+            double precent = initialAmount * percentSeven;
             initialAmount = initialAmount + precent;
-            System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount);
+            System.out.printf("Месяц %s сумма накоплений равна %.2f\n", month, initialAmount);
         }
         System.out.println("Задание 5");
         initialAmount = 15000;
         month = 0;
         while (initialAmount < saveMoney) {
             month++;
-            int precent = initialAmount * 7 / 100;
+            double precent = initialAmount * percentSeven;
             initialAmount = initialAmount + precent;
             if (month % 6 == 0) {
-                System.out.println("Месяц " + month + " сумма накоплений равна " + initialAmount);
+                System.out.printf("Месяц %s сумма накоплений равна %.2f\n", month, initialAmount);
             }
         }
         System.out.println("Задание 6");
         initialAmount = 15000;
         month = 9 * 12;
         for (int i = 1; i <= month; i++) {
-            int precent = initialAmount * 7 / 100;
+            double precent = initialAmount * percentSeven;
             initialAmount = initialAmount + precent;
             if (i % 6 == 0) {
-                System.out.println("Месяц " + i + " сумма накоплений равна " + initialAmount);
+                System.out.printf("Месяц %s сумма накоплений равна %.2f\n", i, initialAmount);
             }
         }
         System.out.println("Задание 7");
